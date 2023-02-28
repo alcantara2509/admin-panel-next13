@@ -22,7 +22,14 @@ const options = {
   plugins: {
     legend: {
       position: 'top' as const,
+      onHover(e) {
+        e.native.target.style.cursor = 'pointer';
+      },
+      onLeave(e) {
+        e.native.target.style.cursor = 'default';
+      },
     },
+
   },
 };
 

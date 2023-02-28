@@ -3,7 +3,6 @@
 import * as React from 'react';
 
 import { Box, Toolbar, Container, Grid, Paper } from '@mui/material';
-// import MenuIcon from '@mui/icons-material/Menu';
 import LinesChart from '../Components/Charts/Lines';
 import DoughnutChart from '../Components/Charts/Doughnut';
 import VerticalChart from '../Components/Charts/Vertical';
@@ -29,7 +28,6 @@ function DashboardContent() {
         }}
       >
         <Grid container spacing={4}>
-          {/* Chart */}
           <Grid item xs={12} md={7} lg={8}>
             <Paper
               sx={{
@@ -43,7 +41,6 @@ function DashboardContent() {
               <VerticalChart />
             </Paper>
           </Grid>
-          {/* Recent Deposits */}
           <Grid item xs={12} md={5} lg={4}>
             <Paper
               sx={{

@@ -12,6 +12,7 @@ export const data = {
   labels: [1, 2, 3],
   datasets: [
     {
+
       label: '# of Votes',
       data: [7, 5, 12],
       backgroundColor: [
@@ -25,6 +26,7 @@ export const data = {
         'rgba(74, 255, 186, 1)',
       ],
       borderWidth: 1,
+
     },
   ],
 };
@@ -35,6 +37,13 @@ const options = {
   plugins: {
     legend: {
       position: 'bottom' as const,
+      display: true,
+      onHover(e) {
+        e.native.target.style.cursor = 'pointer';
+      },
+      onLeave(e) {
+        e.native.target.style.cursor = 'default';
+      },
     },
   },
 };
@@ -42,7 +51,7 @@ const options = {
 function DoughnutChart() {
   return (
     <>
-      <h3 className="font-bold text-white">Doughnuts Chart</h3>
+      <h3 className="font-bold text-white">Donuts Chart</h3>
       <Doughnut data={data} options={options} className="mt-4 mb-10" />
     </>
   );

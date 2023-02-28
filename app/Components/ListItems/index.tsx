@@ -1,43 +1,41 @@
 import * as React from 'react';
 import { ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import { Dashboard as DashboardIcon,
-  ShoppingCart as ShoppingCartIcon,
-  People as PeopleIcon,
-  BarChart as BarChartIcon,
-  Layers as LayersIcon } from '@mui/icons-material';
+  DonutLarge as DonutLargeIcon,
+  Timeline as TimelineIcon,
+  BarChart as BarChartIcon } from '@mui/icons-material';
+import Link from 'next/link';
 
 const items = [
   {
     icon: <DashboardIcon color="secondary" />,
-    title: "Dashboard",
-  },
-  {
-    icon: <ShoppingCartIcon color="secondary" />,
-    title: "Orders",
-  },
-  {
-    icon: <PeopleIcon color="secondary" />,
-    title: "Customers",
+    title: "dashboard",
   },
   {
     icon: <BarChartIcon color="secondary" />,
-    title: "Reports",
+    title: "bar chart",
   },
   {
-    icon: <LayersIcon color="secondary" />,
-    title: "Integrations",
+    icon: <DonutLargeIcon color="secondary" />,
+    title: "donut chart",
+  },
+  {
+    icon: <TimelineIcon color="secondary" />,
+    title: "line chart",
   },
 ];
 
 const mainListItems = (
   <>
     {items.map((item) => (
-      <ListItemButton key={item.title}>
-        <ListItemIcon>
-          {item.icon}
-        </ListItemIcon>
-        <ListItemText primary={item.title} />
-      </ListItemButton>
+      <Link key={item.title} href={`/${item.title === "dashboard" ? "" : item.title.split(' ')[0]}`}>
+        <ListItemButton>
+          <ListItemIcon>
+            {item.icon}
+          </ListItemIcon>
+          <ListItemText className="capitalize" primary={item.title} />
+        </ListItemButton>
+      </Link>
     ))}
   </>
 );

@@ -1,5 +1,5 @@
-import { Badge, IconButton, Toolbar } from '@mui/material';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import { IconButton, Toolbar } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from "./AppBar";
 
@@ -32,11 +32,10 @@ function Topbar({ open, setOpen } : Params) {
           <MenuIcon />
         </IconButton>
         <p className="font-bold text-xl">Floater Labs</p>
-        <IconButton color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
+        <a href="https://github.com/alcantara2509/admin-panel-next13" target="_blank" rel="noopener noreferrer">
+
+          <GitHubIcon />
+        </a>
       </Toolbar>
     </AppBar>
   );
