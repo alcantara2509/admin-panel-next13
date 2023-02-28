@@ -38,12 +38,6 @@ const options = {
     legend: {
       position: 'bottom' as const,
       display: true,
-      onHover(e) {
-        e.native.target.style.cursor = 'pointer';
-      },
-      onLeave(e) {
-        e.native.target.style.cursor = 'default';
-      },
     },
   },
 };
