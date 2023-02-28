@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+  --primary: #1a1a1a;
+  --secondary: #4affba;
+  --lightGray: #7e7e7e;
+  --darkGray: #3f3f3f;
+  --mediumGray: #acacac;
+  --gray: #c7c7c7;
+}
+
+.backgroundDarkGray {
+  background-color: var(--darkGray);
+}
+
+.backgroundGray {
+  background-color: var(--gray);
+}
+
+.backgroundLight {
+  background-color: var(--lightGray);
+}
+
+.colorDarkGray {
+  color: var(--darkGray);
+}
+
+.colorMediumGray {
+  color: var(--mediumGray);
+}
+
+.colorGray {
+  color: var(--gray);
+}
+
+.colorLightGray {
+  color: var(--lightGray);
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--darkGray);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(112, 112, 112);
+  border: none;
+  border-radius: 2px;
+}
+
+.pointer {
+  cursor: pointer;
+}
